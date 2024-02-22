@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CV Mohamed Zaoui Développeur .NET</title>
+    <meta
+      name="description"
+      content="CV développeur web Montpellier .net, PHP"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="menu-navigation">
+        <ul>
+          <li>
+            <a href="#formations" title="Accéder à la section formation"
+              >Formations</a
+            >
+          </li>
+          <li>
+            <a href="#projets-web" title="Accéder à la section projets web"
+              >Projets web</a
+            >
+          </li>
+          <li>
+            <a
+              href="#infos-complementaires"
+              title="Accéder à la section infos complémentaires"
+              >Infos complémentaires</a
+            >
+          </li>
+          <li>
+            <a href="#contactez-moi" title="Accéder à la section contactez-moi"
+              >Contactez-moi</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <br />
+      <img
+        src="./images/photo-mohamed-zaoui.jpg"
+        height="250"
+        width="250"
+        alt=""
+      />
+      <h1>Zaoui Mohamed</h1>
+      <h2>Stage Concépteur Développeur d'Application .NET</h2>
+      <p>
+        Actuellement en formation de Concepteur Développeur d'Application .NET
+        chez Diginamic, je suis à la recherche d'une entreprise qui pourrait
+        m'accueillir pour un stage (non rémunéré) d'une durée de 3 mois pour la
+        période du 17/06 au 23/09/24.
+      </p>
+    </header>
+
+    <main>
+      <section class="infos-principales">
+        <h2>Infos principales</h2>
+        <section class="formations" id="formations">
+          <h3>Formation</h3>
+
+          <h4>Concepteur Développeur d'Application .NET</h4>
+          <p><strong>Diginamic</strong></p>
+          <p><i>Fevrier 2024 - Novembre 2024</i></p>
+          <ul>
+            <li>
+              Concevoir et développer une application sécurisée en couches
+            </li>
+            <li>Préparer le déploiement d'une application sécurisée</li>
+            <li>Définir l'architecture logicielle d'une application</li>
+            <li>POO en C#</li>
+          </ul>
+
+          <h4>Développeur Web & Web Mobile PHP/Symfony</h4>
+          <p><strong>Studi</strong></p>
+          <p><i>Novembre 2021 - Mars 2023</i></p>
+          <ul>
+            <li>Maquetter une application</li>
+            <li>Développer la partie front-end d'une application web</li>
+            <li>Développer la partie back-end d'une application web</li>
+            <li>POO en PHP</li>
+          </ul>
+        </section>
+        <br />
+        <br />
+        <section class="projets-web" id="projets-web">
+          <h2>Projets web</h2>
+          <h3>Le Grand Montpellier</h3>
+          <h4>Pause professionnelle | Projet personnel</h4>
+          <p><i>Fevrier 2018</i></p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+            provident cumque nobis soluta hic, ex recusandae et ullam labore
+            sit?
+          </p>
+          <h3>BodyCool</h3>
+          <h4>Projet de fin de formation | Studi</h4>
+        </section>
+      </section>
+
+      <aside class="infos-complementaires" id="infos-complementaires">
+        <h2>Infos complémentaires</h2>
+        <section class="informations">
+          <h3>Informations</h3>
+          <a href="tel:+0606060606">06 66 66 66 66</a><br />
+          <a href="mailto:moncv@hotmail.com">mon-cv@hotmail.com</a>
+          <p>Montpellier, France</p>
+        </section>
+
+        <section class="competences">
+          <h3>Compétences</h3>
+
+          <ul>
+            <li>Libero odit ab placeat.</li>
+            <li>Ducimus minima esse placeat.</li>
+            <li>Quos ea cumque harum veritatis.</li>
+          </ul>
+        </section>
+        <section class="langues">
+          <h3>Langues</h3>
+          <p>Anglais</p>
+          <p>Francais</p>
+        </section>
+
+        <section class="centre-interet">
+          <h3>Centres d'interêt</h3>
+          <p>Randonnée, Pêche, Cinéma</p>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <h2 id="contactez-moi">Contactez-moi</h2>
+      <form action="./form.php" method="POST">
+        <label for="name">Votre prénom</label>
+        <input type="text" name="name" id="name" />
+        <br>
+        <label for="email">Votre email</label>
+        <input type="email" name="email" id="email" />
+        <br>
+        <label for="message">Votre message</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        <br>
+        <button type="submit">Envoyer</button>
+      </form>
+    </footer>
+  </body>
+</html>
