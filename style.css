@@ -1,43 +1,232 @@
 body {
-  background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    padding: 0 20px 40px;
+    max-width: 1230px;
+    margin: auto;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 16px;
 }
 
+/* FORMATAGE DU TEXTE */
 a {
-  text-decoration: none;
-  color: rgb(80, 80, 185);
+    text-decoration: none;
+    color: rgb(80, 80, 185);
+}
+a:hover {
+    color: #e0c24d;
+}
+p {
+  line-height: 22px;
 }
 
-a:hover {
-  color: rgb(236, 202, 7);
+h1 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+h2 {
+    font-size: 26px;
+    margin: 0;
+}
+h3 {
+    margin-top: 30px;
+    font-size: 22px;
+}
+h4 {
+    font-size: 20px;
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+}
+ul li {
+    margin-bottom: 12px;
+    list-style-type: none;
+    color: rgb(36, 36, 36);
+}
+
+/* ICONES */
+i {
+    margin-right: 8px;
 }
 
 /* HEADER*/
+.header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(231, 231, 231);
+}
+
 /* Menu */
 .header__nav ul {
-  background-color: red;
-  padding: 6px 0;
-  list-style-type: none;
-  font-size: 20px;
-  display: flex;
-  justify-content: start;
-  flex-wrap: wrap;
-  padding: 0;
-}
-
-.header__nav li:not(:last-child) {
-  margin-right: 22px;
-}
-
-/* @media screen and (min-width:768px) {
-    .header__nav ul{
-        
-    }
-} */
-
-
-.div__info-header {
+    padding: 6px 0px;
+    list-style-type: none;
+    font-size: 20px;
     display: flex;
-    flex-direction: column;
-    align-content: center;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+.header__nav li:not(:last-child)::after {
+    content: "\f7a5";
+    font-family: FontAwesome;
+    color: rgb(231, 231, 231);
+    margin: 0 20px;
 }
 
+/* Présentation */
+.info-header {
+    display: grid;
+    text-align: center;
+    justify-items: center;
+}
+.info-header__presentation h2 {
+    background-color: #ffe376;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 22px;
+}
+
+@media screen and (min-width: 890px) {
+    .info-header {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        align-items: center;
+        justify-items: start;
+        gap: 20px;
+        text-align: unset;
+    }
+    .info-header__presentation p {
+        max-width: 80%;
+    }
+    .info-header__presentation h2 {
+        max-width: max-content;
+    }
+}
+
+/* Animation de rotation sur la photo de profil */
+.info-header img {
+    animation: animation-image 1s linear 0s 1 normal none;
+}
+
+@keyframes animation-image {
+    0% {
+        transform: rotate(-540deg) scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* MAIN */
+main {
+    margin-top: 30px;
+}
+@media screen and (min-width: 890px) {
+    main {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+    .infos-complementaires {
+        order: -1;
+        align-self: stretch;
+        margin-right: 20px;
+    }
+}
+
+/* Carte des articles */
+article {
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 0;
+    padding: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #102e9a;
+}
+
+/* Aside */
+.informations a {
+    line-height: 30px;
+}
+
+/* Contactez-moi */
+.contactez-moi {
+    margin-top: 60px;
+}
+
+/* Formulaire */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input,
+textarea {
+    border: 1px solid rgb(231, 231, 231);
+    height: 34px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+textarea {
+    height: auto;
+}
+
+@media screen and (min-width: 890px) {
+    input,
+    textarea {
+        width: 90%;
+    }
+}
+
+/* Bouton */
+button {
+    background-color: #102e9a;
+    padding: 14px 0;
+    min-width: 150px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 7px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+button:hover {
+    background-color: #e0c24d;
+    color: #000;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+footer img {
+    max-height: 48px;
+}
+
+/* Bouton de retour en haut de la page */
+.footer__sticky {
+    width: 66px;
+}
+.footer__sticky__sticky-top {
+    background-color: #e0c24d;
+    height: 66px;
+    width: 66px;
+    border-radius: 80px;
+    position: fixed;
+    bottom: 40px;
+}
+.footer__sticky__sticky-top i {
+    position: relative;
+    font-size: 38px;
+    color: #102e9a;
+    opacity: 0.7;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.footer__sticky__sticky-top i:hover {
+    opacity: 1;
+}
